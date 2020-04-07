@@ -1,5 +1,28 @@
-const mongodb = require('mongodb');
-const getDb = require('../utils/database').getDb;
+//const mongodb = require('mongodb');
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema;
+
+const productSchema = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    imageUrl: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: Number,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    }
+});
+
+/* const getDb = require('../utils/database').getDb;
 
 class Product {
     constructor(title, imageUrl, price, description, id, userId) {
@@ -72,6 +95,6 @@ class Product {
             console.log(err);
         })
     }
-};
+}; */
 
 module.exports = Product;
