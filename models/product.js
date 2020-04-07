@@ -97,4 +97,4 @@ class Product {
     }
 }; */
 
-module.exports = Product;
+module.exports = mongoose.model('Product', productSchema);
