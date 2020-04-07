@@ -45,6 +45,7 @@ userSchema.methods.addToCart = function(product){
     return this.save();
 };
 
+
 /* const mongodb = require('mongodb');
 const getDb = require('../utils/database').getDb;
 
